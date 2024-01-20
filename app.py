@@ -21,7 +21,7 @@ with titre:
     st.subheader('Réponse à la demande de crédit')
     st.write("""###### ***Dashboard réalisé par Julie Saubot pour le projet 7 du parcours de Datascientist Openclassrooms***""" )
 with image:
-    img = Image.open('Logo.png')
+    img = Image.open('logo.png')
     st.image(img, width = 250)
 
 #Chargement des données du dataframe df pour liste des identifiants et matrice X (données imputées et scalées) pour shap
