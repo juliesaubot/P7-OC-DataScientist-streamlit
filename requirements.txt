@@ -11,3 +11,4 @@ seaborn==0.13.1
 shap==0.42.1
 streamlit==1.29.0
 uvicorn==0.26.0
+Scikit-learn==1.2.2
