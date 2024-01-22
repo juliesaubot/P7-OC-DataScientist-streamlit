@@ -112,12 +112,13 @@ async def data_customer(sk_id: str):
     # Return the cleaned data
     return JSONResponse({'status': 'ok','data': X_cust_json})
 
-
+# run the API with uvicorn
+# it will run on "127.0.0.1:8000"
 if __name__ == '__main__':
     uvicorn.run("main:app",host="127.0.0.1", port=8000,debug=True)
 
 
-
+#uvicorn main:app –reload
 
 
 

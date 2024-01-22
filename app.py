@@ -350,3 +350,5 @@ else:
         st.write(feat_select_plot1, "= ", var_x.values[0])
         st.write(feat_select_plot2, "= ", var_y.values[0])
         st.write("La demande de credit du client est : ", var_z.values[0])
+
+#streamlit run app.py
