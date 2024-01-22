@@ -13,4 +13,6 @@ streamlit==1.29.0
 uvicorn==0.26.0
 scikit-learn==1.2.2
 lightgbm==4.1.0
+shap==0.42.1
+
 
