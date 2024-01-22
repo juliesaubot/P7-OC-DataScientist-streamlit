@@ -52,7 +52,7 @@ list_feature_names.remove('predict_proba')
 list_feature_names.remove('SK_ID_CURR')
 
 #Sélection du client
-response = requests.get("http://127.0.0.1:8000/predict")
+response = requests.get("https://saubot-julie-fastapi-102023-5cca48d2a8d1.herokuapp.com/predict")
 if response:
     list_client_id = response.json()['list_client_id']
     list_client_id = sorted(list_client_id)
@@ -77,7 +77,7 @@ else:
     #Calcul de la réponse par rapport à un identifiant de client
     id = {"sk_id" : str(id_filter)}
     sk_id = id["sk_id"]
-    response2 = requests.get(url = 'http://127.0.0.1:8000/predict_get/' + str(sk_id), json = id)
+    response2 = requests.get(url = 'https://saubot-julie-fastapi-102023-5cca48d2a8d1.herokuapp.com/predict_get/' + str(sk_id), json = id)
 
     if response2 :
         temp = response2.json()
@@ -103,7 +103,6 @@ else:
             st.write("************************************************************************************")
             st.metric(label = """##### Numéro du client""", value = id_filter)
             
-
 
         with col2:
             #Affichage score et seuil
@@ -167,7 +166,7 @@ else:
         
         #Informations du client
         st.write("""#### Informations du client numéro : """ + str(id_filter))
-        req = requests.post(url = 'http://127.0.0.1:8000/data_customer/' + str(sk_id), json = id)
+        req = requests.post(url = 'https://saubot-julie-fastapi-102023-5cca48d2a8d1.herokuapp.com/data_customer/' + str(sk_id), json = id)
         info = req.json()['data']
         df_info = pd.DataFrame(info)
         df_info_tr = df_info.T
