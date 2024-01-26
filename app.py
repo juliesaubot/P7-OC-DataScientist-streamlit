@@ -167,7 +167,7 @@ else:
         
         #Informations du client
         st.write("""#### Informations du client numéro : """ + str(id_filter))
-        req = requests.post(url = 'https://saubot-julie-fastapi-102023-5cca48d2a8d1.herokuapp.com/data_customer/' + str(sk_id), json = id)
+        req = requests.get(url = 'https://saubot-julie-fastapi-102023-5cca48d2a8d1.herokuapp.com/data_customer/' + str(sk_id), json = id)
         info = req.json()['data']
         df_info = pd.DataFrame(info)
         df_info_tr = df_info.T
