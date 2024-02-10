@@ -173,8 +173,12 @@ else:
         print(req)
         info = req.json()['data']
         df_info = pd.DataFrame(info)
+        st.dataframe(df_info)
+        df_info = df_info.set_index('SK_ID_CURR')
         df_info_tr = df_info.T
+        #df_info_tr.columns = [str(id_filter)]
         st.dataframe(df_info_tr)
+        st.write(df_info['OWN_CAR_AGE'].values)
 
     
 
@@ -186,7 +190,7 @@ else:
     shap.initjs()
     explainer = shap.Explainer(model.best_estimator_)
     shap_val = explainer.shap_values(X)
-    ind = df.index[df["SK_ID_CURR"] == id_filter]
+    ind = int(df.index[df["SK_ID_CURR"] == id_filter].values)
 
     st.subheader("1. Feature importance locale pour le client numéro : "+str(id_filter))
     st.write('<p style="font-size:22px; color:white;">Importance des features pour le calcul du score du client :</p>', unsafe_allow_html=True)
@@ -194,7 +198,7 @@ else:
     fig, ax = plt.subplots()
     X_approx = np.round(X,3)
     fig = shap.force_plot(base_value=explainer.expected_value[0],
-                    shap_values=shap_val[0][0,:],
+                    shap_values=shap_val[0][ind,:],
                     features=X_approx.loc[[int(id_filter)]],
                     feature_names=list_feature_names,
                     matplotlib=True)
