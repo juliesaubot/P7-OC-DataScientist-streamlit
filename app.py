@@ -85,7 +85,7 @@ else:
         temp = response2.json()
         result = str(temp["Réponse"])
         #Scores du client
-        seuil = str(((1-0.414)*100))
+        seuil = str(((1-0.49)*100))
         proba = float(temp["Proba_client"])
         pourcentage = round(((1-proba)*100),2)
         pourc_str = str(pourcentage)
@@ -140,7 +140,7 @@ else:
         #Affichage résultats du modèle de prédiction:             
         with st.expander("""##### Cliquer pour obtenir les résultats du modèle de prédiction"""):
             st.metric(label = "Probabilité calculée par le modèle", value = proba)
-            st.metric(label='# et seuil de probabilité : ', value=0.414)
+            st.metric(label='# et seuil de probabilité : ', value=0.49)
             st.write('<p style="font-size:24px; color:grey;">Si le score du client est en-dessous du seuil indiqué par le modèle de prédiction, le client ne sera pas à risque, et il pourra obtenir son prêt.</p>',
                         unsafe_allow_html=True)
             
