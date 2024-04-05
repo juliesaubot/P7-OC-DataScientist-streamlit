@@ -4,7 +4,14 @@
 C'est une partie du projet 7 de la formation OpenClassrooms du parcours data scientist
 
 ## Objectifs du projet
-Ce projet a pour but de déployer un modèle via une API (FAST API) dans le Web via Heroku en utilisant un dashboard (Streamlit) pour présenter le travail de modélisation. Il comporte aussi un test unitaire à l'aide de Pytest. Le code source de l'API contient entre autres un calculateur de score pour une demande de crédit bancaire qui retourne au Dashboard la probabilité que le client puisse le rembourser, et qui indique donc si le crédit est accordé ou non. Cette partie est le dashbord streamlit qui a été deployé on Heroku.
+
+Une société financière, nommée "Prêt à dépenser", qui propose des crédits à la consommation pour des personnes ayant peu ou pas du tout d'historique de prêt souhaite mettre en œuvre un outil de “scoring crédit” pour calculer la probabilité qu’un client rembourse son crédit, puis classifie la demande en crédit accordé ou refusé.
+
+Elle souhaite donc développer un algorithme de classification en s’appuyant sur des sources de données variées (données comportementales, données provenant d'autres institutions financières, etc.). De plus, les chargés de relation client ont fait remonter le fait que les clients sont de plus en plus demandeurs de transparence vis-à-vis des décisions d’octroi de crédit. Cette demande de transparence des clients va tout à fait dans le sens des valeurs que l’entreprise veut incarner.
+
+Ce projet a donc pour but de déployer le modèle via une API (FAST API) dans le Web via Heroku en utilisant un dashboard interactif (Streamlit) pour présenter le travail de modélisation. Il comporte aussi un test unitaire à l'aide de Pytest. Le code source de l'API contient entre autres un calculateur de score pour une demande de crédit bancaire qui retourne au Dashboard la probabilité que le client puisse le rembourser, et qui indique donc si le crédit est accordé ou non.
+
+Cette partie est le dashbord streamlit qui a été deployé on Heroku.
 
 ## Découpage des dossiers
 - fichier main.py : fichier python de l'API FAST API
