@@ -1,4 +1,7 @@
-# Projet 7 Openclassrooms
+# P7-OC-DataScientist-streamlit
+
+## Projet : Implémentez un modèle de scoring
+C'est une partie du projet 7 de la formation OpenClassrooms du parcours data scientist
 
 ## Objectifs du projet
 Ce projet a pour but de déployer un modèle via une API (FAST API) dans le Web via Heroku en utilisant un dashboard (Streamlit) pour présenter le travail de modélisation. Il comporte aussi un test unitaire à l'aide de Pytest. Le code source de l'API contient entre autres un calculateur de score pour une demande de crédit bancaire qui retourne au Dashboard la probabilité que le client puisse le rembourser, et qui indique donc si le crédit est accordé ou non. Cette partie est le dashbord streamlit qui a été deployé on Heroku.
